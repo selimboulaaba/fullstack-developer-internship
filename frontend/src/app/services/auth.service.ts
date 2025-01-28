@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'https://blueblood-backend.up.railway.app/auth'
+  private baseUrl = 'http://localhost:8081/auth'
 
   constructor(private http: HttpClient) { }
 
   signIn(user: User): Observable<User> {
-    return this.http.post<User>(`${this.baseUrl}/signin`, user);
+    return this.http.post<User>(`${this.baseUrl}/login`, user);
   }
 
   signUp(user: User): Observable<User> {

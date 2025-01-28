@@ -8,7 +8,6 @@ import blueblood.test.backend.services.JwtService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
 @RequestMapping("/auth")
 @RestController
 public class AuthenticationController {
