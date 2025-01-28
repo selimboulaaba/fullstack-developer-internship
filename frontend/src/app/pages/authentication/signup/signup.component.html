@@ -1,0 +1,48 @@
+<div class="p-10 md:p-14 bg-white rounded-lg w-[90vw] sm:w-[500px] mx-auto">
+    <p-card header="Sign up" class="text-2xl font-semibold">
+        <p class="text-lg text-gray-700 font-thin">
+            Please enter your details
+        </p>
+
+        <div class="relative flex items-center mt-6">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-800 dark:text-gray-400"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+            </svg>
+            <input type="text"
+                class="font-thin pl-12 w-[100%] border border-gray-400 focus:border-purple-600 focus:shadow focus:outline-none rounded-lg px-3 py-2 text-base text-gray-800"
+                placeholder="Username" />
+        </div>
+        <div class="relative flex items-center mt-2">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-800 dark:text-gray-400"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z" />
+            </svg>
+            <input type="text"
+                class="font-thin pl-12 w-[100%] border border-gray-400 focus:border-purple-600 focus:shadow focus:outline-none rounded-lg px-3 py-2 text-base text-gray-800"
+                placeholder="Password" />
+        </div>
+        <div class="relative flex items-center mt-2">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-800 dark:text-gray-400"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z" />
+            </svg>
+            <input type="text"
+                class="font-thin pl-12 w-[100%] border border-gray-400 focus:border-purple-600 focus:shadow focus:outline-none rounded-lg px-3 py-2 text-base text-gray-800"
+                placeholder="Confirm Password" />
+        </div>
+
+        <button
+            class="hover:cursor-pointer w-[100%] mt-6 text-base py-2 bg-purple-400 hover:bg-purple-600 text-white rounded-lg">Sign
+            Up</button>
+
+        <p class="font-thin text-sm mt-4 text-gray-700">
+            You have an account?
+            <a [routerLink]="['/auth/login']" class="text-purple-400 hover:text-purple-600 hover:underline">Sign in!</a>
+        </p>
+
+    </p-card>
+</div>
