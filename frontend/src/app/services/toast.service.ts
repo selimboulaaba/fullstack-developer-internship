@@ -12,7 +12,7 @@ export class ToastService {
   }
 
   showError(message: string) {
-    this.toastr.error('SucErrorcess!', message);
+    this.toastr.error('Error!', message);
   }
 
   showInfo(message: string) {

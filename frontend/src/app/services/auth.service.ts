@@ -11,11 +11,23 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  signIn(user: User): Observable<User> {
-    return this.http.post<User>(`${this.baseUrl}/login`, user);
+  signIn(user: User): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, user);
   }
 
   signUp(user: User): Observable<User> {
     return this.http.post<User>(`${this.baseUrl}/signup`, user);
+  }
+
+  storeToken(token: string) {
+    localStorage.setItem('token', token);
+  }
+
+  logout() {
+    localStorage.removeItem('token')
+  }
+
+  getToken() {
+    return localStorage.getItem('token')
   }
 }

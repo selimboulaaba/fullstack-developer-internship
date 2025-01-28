@@ -15,9 +15,9 @@ export const appConfig: ApplicationConfig = {
     MessageService,
     provideAnimations(),
     provideToastr({
-      timeOut: 10000000,
+      timeOut: 100000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
-    }), 
+    }),
   ]
 };

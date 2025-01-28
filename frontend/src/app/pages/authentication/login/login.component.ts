@@ -35,18 +35,16 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    console.log(this.userForm.value)
     if (this.userForm.valid) {
       const userData = this.userForm.value;
       this.authService.signIn(userData).subscribe(
         (response) => {
           this.toastService.showSuccess('Signed In Successfully!');
-          console.log(response);
-          // this.router.navigate(['/admin', response.id]);
+          this.authService.storeToken(response.token)
+          this.router.navigate(['/home']);
         },
         (error) => {
-          this.toastService.showError('There has been an Error!');
-          console.error(error);
+          this.toastService.showError('Wrong Identification!');
         }
       );
     }
